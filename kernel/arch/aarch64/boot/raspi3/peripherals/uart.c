@@ -141,6 +141,15 @@ void uart_send_string(char *str)
 {
         /* LAB 1 TODO 3 BEGIN */
         /* BLANK BEGIN */
+		int index = 0;
+		char now_char;
+		do
+		{
+			now_char = str[index];
+			early_uart_send(now_char);
+			index++;
+		} while (now_char!='\0');
+		
         /* BLANK END */
         /* LAB 1 TODO 3 END */
 }
